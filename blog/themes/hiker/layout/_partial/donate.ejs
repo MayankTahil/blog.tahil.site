@@ -1,0 +1,12 @@
+<div id="donation_div"></div>
+
+<%- js('js/vdonate') %>
+<script>
+var a = new Donate({
+  title: '<%- theme.donate.message %>', // Optional parameters, play reward title
+  btnText: '<%= __('donation.button_text') %>', // Optional parameters, play button text
+  el: document.getElementById('donation_div'),
+  wechatImage: '<%- theme.donate.wechatImage %>',
+  alipayImage: '<%- theme.donate.alipayImage %>'
+});
+</script>

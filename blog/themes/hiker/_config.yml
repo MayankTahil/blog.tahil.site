@@ -1,0 +1,159 @@
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Header Menu
+menu:
+  Home: /
+  Archives: archives
+  Categories: /categories/tutorials
+  # Tags: /tags
+  About: /about
+rss: /atom.xml
+
+since: 2017
+anchorjs: true
+
+# Set default keywords (Use a comma to separate)
+keywords: ""
+
+# Put your favicon.ico or avatar.jpg into `hexo-site/themes/hiker/source/` directory.
+avatar: 
+  enable: true
+  border: false
+  width: 220
+  height: 87
+  top: 0
+  url: css/images/mylogo-icon.png
+  head_url: css/images/mylogo.png
+  front_url: css/images/mylogo-icon.png
+  front_width: 90
+  front_height: 90
+
+# Homepage
+# eg. home_background_image: [css/images/home-bg.jpg, http://t.cn/RMbvEza]
+# eg. mode: image | polyline | trianglify
+home_background_image:
+  enable: true
+  mode: image
+  rolling: true
+  url: [css/images/home-bg-1.jpg, css/images/home-bg-2.jpg, css/images/home-bg-3.jpg]
+
+home_logo_image:
+  enable: false
+  border: false
+  url: css/images/homelogo.jpg
+
+# AboutPage background
+about_big_image: [css/images/about-1.jpg, css/images/about-2.jpg, css/images/about-3.jpg]
+
+# Archive pagination
+archive_pagination: true
+
+# Post Article's Content
+post_catalog:
+  enable: true
+
+# Content
+fancybox: true
+
+# Sidebar
+sidebar: left
+widgets:
+- social
+- category
+- tagcloud
+- archive
+- recent_posts
+
+# Social Links
+# Key is the name of FontAwsome icon.
+# Value is the target link (E.g. GitHub: https://github.com/iTimeTraveler)
+social:
+  Github: https://github.com/mayanktahil
+  LinkedIn: https://www.linkedin.com/in/mayanktahil/
+  Twitter: https://twitter.com/mayanktahil
+  Instagram: https://www.instagram.com/mayanktahil/
+  email: mayank.tahil-AT-gmail-DOT-com
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+
+# comment ShortName, you can choose only ONE to display.
+gentie_productKey: #your-gentie-product-key
+duoshuo_shortname: 
+disqus_shortname: blog-tahil-site
+livere_shortname: 
+uyan_uid: 
+wumii: 
+
+# Code Highlight theme
+# Available value:
+#    default | gray | normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: night eighties
+
+
+# Article theme color
+# Available value:
+#    random | orange | blue | red | green | black
+theme_color: black
+
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+ - category
+ - tagcloud
+ - archive
+
+
+# widget behavior
+archive_type: 'monthly'
+show_count: true
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+google_site_verification:
+baidu_site_verification:
+qihu_site_verification:
+
+source_dir: source
+public_dir: public
+tag_dir: archive/tags
+archive_dir: archive
+category_dir: archive/categories
+code_dir: code
+i18n_dir: :lang
+skip_render:
+
+# Miscellaneous
+google_analytics: UA-108403055-3
+twitter:
+
+# # Facebook SDK Support.
+# # https://github.com/iissnan/hexo-theme-next/pull/410
+# facebook_sdk:
+#   enable: false
+#   app_id:       #<app_id>
+#   fb_admin:     #<user_id>
+#   like_button:  #true
+#   webmaster:    #true
+
+donate:
+    enable: false
+    message: Want to contribute? Please send me some love via email.
+    wechatImage: 
+    alipayImage: 
+
+#RSS feed plugin for hugo configs
+feed:
+  type: atom
+  path: atom.xml
+  limit: 100
+  hub: 
+  content:
+  content_limit: 140
+  content_limit_delim: ' '

@@ -1,0 +1,18 @@
+<div id="column1" style="float:left; margin:0; width:90%;">
+	<%- partial('_partial/article', {post: page, index: false}) %>
+</div>
+<div id="column2" style="float:right; margin:0; width:10%;">
+	<!-- Table of Contents -->
+	<% if (theme.post_catalog.enable){ %>
+	  <aside id="toc-sidebar">
+	    <div id="toc" class="toc-article">
+	    <strong class="toc-title"><%= __('contents') %></strong>
+	    <% if (toc(page.content) != ""){ %>
+	        <%- toc(page.content, { class: "nav", list_number: false }) %>
+	    <% } else { %>
+	        <ol class="nav"><%= __('none') %></ol>
+	    <% } %>
+	    </div>
+	  </aside>
+	<% } %>
+</div>
