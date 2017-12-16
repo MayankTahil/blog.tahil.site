@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: blogsite
+  name: blogsite
+spec:
+  replicas: 3
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: blogsite
+    spec:
+      containers:
+      - args:
+        - python
+        - app.py
+        image: mayankt/blog:master
+        imagePullPolicy: Always
+        name: blogsite
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}
