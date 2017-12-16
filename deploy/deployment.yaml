@@ -1,10 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.2.0 (99f88ef)
   creationTimestamp: null
   labels:
-    io.kompose.service: blogsite
-  name: blogsite
+    io.kompose.service: blog
+  name: blog
 spec:
   replicas: 3
   strategy: {}
@@ -12,15 +15,11 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        io.kompose.service: blogsite
+        io.kompose.service: blog
     spec:
       containers:
-      - args:
-        - python
-        - app.py
-        image: mayankt/blog:master
-        imagePullPolicy: Always
-        name: blogsite
+      - image: mayankt/blog:master
+        name: blog
         ports:
         - containerPort: 80
         resources: {}

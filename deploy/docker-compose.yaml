@@ -1,0 +1,9 @@
+---
+version: "2"
+services:
+  # Locally hosted blog site
+  blog:
+    image: mayankt/blog:master
+    ports:
+      - "80:80"
+    hostname: blog
