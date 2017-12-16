@@ -1,0 +1,26 @@
+version: '1.0'
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: mayankt/blog
+    working_directory: ./
+    dockerfile: blog.tahil.site-lite.dockerfile
+    tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
+  PushingToDockerRegistry:
+    title: Pushing to Docker Registry
+    type: push
+    candidate: '${{BuildingDockerImage}}'
+    tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
+    registry: dockerhub
+  RunningDeployScript:
+    title: Running Deploy Script
+    type: deploy
+    kind: kubernetes
+    cluster: mayanktahil@tahil-site
+    namespace: kube-public
+    when:
+      branch:
+        only:
+          - master
+    file_path: ./deploy/deploy-service.yaml

@@ -25,3 +25,26 @@ spec:
         resources: {}
       restartPolicy: Always
 status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.2.0 (99f88ef)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: blog
+  name: blog
+spec:
+  ports:
+  - name: "blogsite"
+    port: 80
+    targetPort: 80
+  selector:
+    io.kompose.service: blog
+  type: LoadBalancer
+status:
+  loadBalancer: {}

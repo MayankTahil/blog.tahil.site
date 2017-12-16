@@ -24,7 +24,7 @@ If you have docker locally installed, you can steal a portable, lightweight, off
 To pull a ready made image from my docker hub account, execute the following : 
 
 ```bash
-docker run -it --rm mayankt/blog:tahil-site
+docker run -it --rm -p 80:80 mayankt/blog:master
 ```
 
 > You can abort hosting the site by pressing `ctrl` + `c` to quit terminal task execution. 
@@ -43,10 +43,10 @@ git clone https://github.com/MayankTahil/blog.tahil.site.git
 cd blog.tahil.site
 
 # Create your container image
-docker build -f blog.tahil.site-lite.dockerfile -t mayankt/blog:tahil-site .
+docker build -f blog.tahil.site-lite.dockerfile -t mayankt/blog:master .
 
 # Run your docker container
-docker run -it --rm -p 80:80 mayankt/blog:tahil-site
+docker run -it --rm -p 80:80 mayankt/blog:master
 ```
 
 > You can abort hosting the site by pressing `ctrl` + `c` to quit terminal task execution. 
