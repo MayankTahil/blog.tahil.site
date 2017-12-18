@@ -5,7 +5,7 @@ steps:
     type: build
     image_name: mayankt/blog
     working_directory: ./
-    dockerfile: blog.tahil.site-lite.dockerfile
+    dockerfile: blog.tahil.site-prod.dockerfile
     tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
   PushingToDockerRegistry:
     title: Pushing to Docker Registry

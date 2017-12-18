@@ -1,3 +1,5 @@
+hexo server -p 80 --silent 
+
 rm -rf public
 wget --recursive \
 		--no-clobber \
@@ -6,6 +8,6 @@ wget --recursive \
 		--convert-links \
 		--restrict-file-names=windows \
 		--random-wait \
-		--domains $1 \
-		--no-parent $1
-mv $1 public
+		--domains localhost \
+		--no-parent localhost
+mv localhost public
