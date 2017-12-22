@@ -1,4 +1,4 @@
-hexo server -p 80 --silent 
+hexo server -p 80 > output.log 2>&1 &
 
 rm -rf public
 wget --recursive \
